@@ -12,7 +12,11 @@ export class RecipeListComponent implements OnInit {
   	new Recipe('Tarte au citron',
   				'Une pâtisserie incontournable, une tarte acidulée… Bref, un dessert tout simplement excellent !',
   			    'https://static.cuisineaz.com/240x192/i139868-.jpeg'
-  		)
+  		),
+    new Recipe('Tarte aux pommes',
+          'Une pâtisserie incontournable, une tarte acidulée… Bref, un dessert tout simplement excellent !',
+            'https://assets.afcdn.com/recipe/20180705/80308_w600cxt0cyt0cxb3888cyb5184.jpg'
+      )
   ];
   constructor() { }
 
