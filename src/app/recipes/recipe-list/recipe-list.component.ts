@@ -19,7 +19,7 @@ export class RecipeListComponent implements OnInit {
       )
   ];
 
-  @Output('recipeWasSelected') recipeToShowDetail : EventEmitter<Recipe> = new EventEmitter <Recipe>()
+  @Output('recipeWasSelected') recipeToShowDetail : EventEmitter<Recipe> = new EventEmitter <Recipe>();
 
   constructor() {
   }
