@@ -1,19 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { Recipe } from './recipe.model';
+import { RecipeService} from './recipe.service'
+
 @Component({
   selector: 'app-recipes',
   templateUrl: './recipes.component.html',
-  styleUrls: ['./recipes.component.css']
+  styleUrls: ['./recipes.component.css'],
+  providers: [RecipeService]
 })
 export class RecipesComponent implements OnInit {
 	recipeToShow : Recipe;
-	constructor() { }
+	constructor(private recipeService : RecipeService) { }
 
 	ngOnInit() {
-	}
-
-	setRecipeToShow(recipeToShow : Recipe) {
-		console.log('recipe' + recipeToShow.name);
-		this.recipeToShow = recipeToShow;
+		// need to subscribe to the emmetter to get informed about changes
+		this.recipeService.getRecipeToShow().subscribe(
+			(recipe : Recipe) => {
+				this.recipeToShow = recipe;
+			}
+		);
 	}
 }

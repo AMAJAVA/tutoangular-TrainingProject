@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +13,7 @@ import { ShoopingListComponent } from './shooping/shooping-list/shooping-list.co
 import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
 import { ShoopingEditComponent } from './shooping/shooping-list/shooping-edit/shooping-edit.component';
 import { DropdownDirective } from './shared/dropdown.directive';
+import { ShoopingListService } from './shooping/shooping-list.service'
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { DropdownDirective } from './shared/dropdown.directive';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ShoopingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
