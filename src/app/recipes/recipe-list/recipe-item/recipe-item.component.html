@@ -1,6 +1,12 @@
 <div class="row">
 	<div class="col-xs-12">
-		<a href="#" class="list-group-item clearfix" (click)="onShowDetail()">
+		<a
+			style='cursor: pointer;'
+			routerLinkActive ="active"
+			[routerLink]="[reciptItem.id]"
+			class="list-group-item clearfix"
+			(click)="onShowDetail()"
+		>
 			<div class="pull-left">
 				<h4 class="list-group-item-heading">{{reciptItem.name}}</h4>
 				<p class="list-group-item-text" [innerText]="reciptItem.description"></p>
