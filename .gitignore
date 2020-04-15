@@ -46,3 +46,6 @@ testem.log
 Thumbs.db
 /.vs/ProjectSettings.json
 /.vs/slnx.sqlite
+/.vs/TrainingProject/config/applicationhost.config
+/.vs/TrainingProject/v16/.suo
+/.vs/VSWorkspaceState.json
